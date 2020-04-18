@@ -18,6 +18,7 @@ function getCsvData(dataPath) {
 function convertArray(data) {
 	var now_num = 0;			// 今の回答の順番
 	var data_num = 0;
+	var btn_flg = 0;
 	var oldElement = document.getElementById('old_str');
 	var outputElement = document.getElementById('now_q');
 	var oldString = "";
@@ -83,9 +84,47 @@ function convertArray(data) {
 
 		 				// 生成したdiv要素を追加する
 						outputElement.appendChild( btn );
+
+						btn_flg = 1;
 					}
 				}				
 			}
+		}
+
+		var text = document.createElement('p');
+		outputElement.appendChild(text);
+
+		// 最初に戻るボタンを作る
+		if( btn_flg == 0 ){
+			var btn = document.createElement('input');
+			// 
+			btn.type = "button";
+			btn.value = "最初に戻る";
+			btn.onclick = function( e ){
+				haba_num = 0;
+				line_num = 1;
+				outputElement.textContent = null;
+				getCsvData('./flow.csv');
+
+			};
+
+			// 生成したdiv要素を追加する
+			outputElement.appendChild( btn );			
+		}
+		// 最初に戻るボタンを作る
+		if( btn_flg == 0 ){
+			var btn = document.createElement('input');
+			// 
+			btn.type = "button";
+			btn.value = "一つ前の質問に戻る";
+			btn.onclick = function( e ){
+				outputElement.textContent = null;
+				getCsvData('./flow.csv');
+
+			};
+
+			// 生成したdiv要素を追加する
+			outputElement.appendChild( btn );			
 		}
 	}
 
