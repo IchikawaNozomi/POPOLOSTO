@@ -10,8 +10,8 @@ body {
   margin: 0;
 }
 
-@media screen and (max-width: 480px) {
-p { font-size : 18px ; }
+@media screen and (max-width: 1000px) {
+p { font-size : 2rem ; }
 }
 
 input {
@@ -23,7 +23,7 @@ input {
   color: #FFF;
   border-bottom: solid 4px #627295;
   border-radius: 3px;
-  font-size:1.5rem;
+  font-size:2rem;
   margin:10px
 }
 
