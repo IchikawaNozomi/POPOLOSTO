@@ -101,8 +101,10 @@ input:active {
 }
 
 // スマフォ向けサイズ
-@media screen and (max-width: 1000px) {
-  p { font-size : 4rem ; }
+@media screen and (max-width: 800px) {
+  p { 
+    font-size : 4rem ;
+  }
   input {
      /* input要素全部に対して装飾 */
     display: inline-block;
