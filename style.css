@@ -10,6 +10,10 @@ body {
   margin: 0;
 }
 
+@media screen and (max-width: 480px) {
+p { font-size : 18px ; }
+}
+
 input {
    /* input要素全部に対して装飾 */
    display: inline-block;
