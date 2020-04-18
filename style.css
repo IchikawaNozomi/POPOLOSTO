@@ -14,7 +14,7 @@ input {
   display: inline-block;
   padding: 0.5em 2em;
   text-decoration: none;
-  background: #55ffff;/*ボタン色*/
+  background: #aaffff;/*ボタン色*/
   color: #000000;
   border-bottom: solid 4px #B8DAFC;
   border-radius: 3px;
@@ -31,7 +31,7 @@ input {
   display: inline-block;
   padding: 0.5em 2em;
   text-decoration: none;
-  background: #55ffff;/*ボタン色*/
+  background: #aaffff;/*ボタン色*/
   color: #000000;
   border-bottom: solid 4px #B8DAFC;
   border-radius: 3px;
@@ -47,7 +47,7 @@ input {
       display: inline-block;
       padding: 0.5em 2em;
       text-decoration: none;
-      background: #55ffff;/*ボタン色*/
+      background: #aaffff;/*ボタン色*/
       color: #000000;
       border-bottom: solid 4px #B8DAFC;
       border-radius: 3px;
@@ -64,7 +64,7 @@ input {
       display: inline-block;
       padding: 0.5em 2em;
       text-decoration: none;
-      background: #55ffff;/*ボタン色*/
+      background: #aaffff;/*ボタン色*/
       color: #000000;
       border-bottom: solid 4px #B8DAFC;
       border-radius: 3px;
