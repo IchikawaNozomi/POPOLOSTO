@@ -72,7 +72,7 @@ function convertArray(data) {
 							
 							oldElement.textContent = null;
 							var text = document.createElement('p');
-							oldElement.textHTML = "前の質問：" + e.target.oldString;
+							oldElement.innerHTML = "前の質問：" + e.target.oldString;
 							oldElement.appendChild(text);
 							
 							
