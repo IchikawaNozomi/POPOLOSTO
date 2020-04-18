@@ -10,17 +10,19 @@ body {
   margin: 0;
 }
 
-input {
-   /* input要素全部に対して装飾 */
-   display: inline-block;
-  padding: 0.5em 2em;
-  text-decoration: none;
-  background: #E5F9FF;/*ボタン色*/
-  color: #000000;
-  border-bottom: solid 4px #B8DAFC;
-  border-radius: 3px;
-  font-size:2rem;
-  margin:8px
+@media screen and (min-width: 1000px) {
+  input {
+     /* input要素全部に対して装飾 */
+     display: inline-block;
+    padding: 0.5em 2em;
+    text-decoration: none;
+    background: #E5F9FF;/*ボタン色*/
+    color: #000000;
+    border-bottom: solid 4px #B8DAFC;
+    border-radius: 3px;
+    font-size:2rem;
+    margin:8px
+  }
 }
 
 input:active {
