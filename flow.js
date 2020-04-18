@@ -90,44 +90,43 @@ function convertArray(data) {
 				}				
 			}
 		}
-
-		var text = document.createElement('p');
-		outputElement.appendChild(text);
-
-		// 最初に戻るボタンを作る
-		if( btn_flg == 0 ){
-			var btn = document.createElement('input');
-			// 
-			btn.type = "button";
-			btn.value = "最初に戻る";
-			btn.onclick = function( e ){
-				haba_num = 0;
-				line_num = 1;
-				outputElement.textContent = null;
-				getCsvData('./flow.csv');
-
-			};
-
-			// 生成したdiv要素を追加する
-			outputElement.appendChild( btn );			
-		}
-		// 最初に戻るボタンを作る
-		if( btn_flg == 0 ){
-			var btn = document.createElement('input');
-			// 
-			btn.type = "button";
-			btn.value = "一つ前の質問に戻る";
-			btn.onclick = function( e ){
-				outputElement.textContent = null;
-				getCsvData('./flow.csv');
-
-			};
-
-			// 生成したdiv要素を追加する
-			outputElement.appendChild( btn );			
-		}
 	}
+	
+	var text = document.createElement('p');
+	outputElement.appendChild(text);
 
+	// 最初に戻るボタンを作る
+	if( btn_flg == 0 ){
+		var btn = document.createElement('input');
+		// 
+		btn.type = "button";
+		btn.value = "最初に戻る";
+		btn.onclick = function( e ){
+			haba_num = 0;
+			line_num = 1;
+			outputElement.textContent = null;
+			getCsvData('./flow.csv');
+
+		};
+
+		// 生成したdiv要素を追加する
+		outputElement.appendChild( btn );			
+	}
+	// 最初に戻るボタンを作る
+	if( btn_flg == 0 ){
+		var btn = document.createElement('input');
+		// 
+		btn.type = "button";
+		btn.value = "一つ前の質問に戻る";
+		btn.onclick = function( e ){
+			outputElement.textContent = null;
+			getCsvData('./flow.csv');
+
+		};
+
+		// 生成したdiv要素を追加する
+		outputElement.appendChild( btn );			
+	}
 }
 
 // ブラウザを立ち上げる
