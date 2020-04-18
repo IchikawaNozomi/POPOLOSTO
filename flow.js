@@ -69,7 +69,13 @@ function convertArray(data) {
 							console.log( e.target.value, e.target.data );
 							haba_num = e.target.haba + 2;
 							line_num = e.target.data;
-							oldElement.textContent = "前の質問：" + e.target.oldString;
+							
+							oldElement.textContent = null;
+							var text = document.createElement('p');
+							oldElement.textHTML = "前の質問：" + e.target.oldString;
+							oldElement.appendChild(text);
+							
+							
 							outputElement.textContent = null;
 							getCsvData('./flow.csv');
 
