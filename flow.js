@@ -1,6 +1,7 @@
 var line_num = 1;			// 選択肢の位置
 var haba_num = 0;			// 選択肢の横の位置
 var old_num = line_num;
+var old = [];
 
 // CSVの取り込み
 function getCsvData(dataPath) {
@@ -68,7 +69,7 @@ function convertArray(data) {
 						btn.oldString = oldString;
 						btn.onclick = function( e ){
 							console.log( e.target.value, e.target.data );
-							old_num  = line_num;
+							old[ e.target.haba ] = line_num;
 							haba_num = e.target.haba + 2;
 							line_num = e.target.data;
 
@@ -121,7 +122,7 @@ function convertArray(data) {
 		btn.value = "一つ前の質問に戻る";
 		btn.onclick = function( e ){
 			haba_num = haba_num - 2;
-			line_num = old_num;
+			line_num = old[ haba_num ];
 			outputElement.textContent = null;
 			getCsvData('./flow.csv');
 
@@ -135,5 +136,6 @@ function convertArray(data) {
 // ブラウザを立ち上げる
 window.onload = function () {
 	// ここに読み込み完了時に実行してほしい内容を書く。
+	old[ 0 ] = line_num;
 	getCsvData('./flow.csv');
 };
