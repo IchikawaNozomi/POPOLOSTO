@@ -10,7 +10,7 @@ body {
   margin: 0;
 }
 
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 1000px) {
 p { font-size : 4rem ; }
 }
 
