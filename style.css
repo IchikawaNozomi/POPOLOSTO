@@ -2,10 +2,6 @@
 input[type="submit"]{
 -webkit-appearance: none;
 }
-	
-p{
-    font-size:2rem;
-}
 
 body {
   font-family: YuGothic, "游ゴシック体", "Yu Gothic", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
@@ -14,6 +10,9 @@ body {
 }
 
 @media screen and (min-width: 1000px) {
+  p{
+      font-size:2rem;
+  }
   input {
      /* input要素全部に対して装飾 */
      display: inline-block;
