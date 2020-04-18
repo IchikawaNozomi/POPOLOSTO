@@ -1,0 +1,24 @@
+@charset "UTF-8";
+body {
+  font-family: YuGothic, "游ゴシック体", "Yu Gothic", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+input {
+   /* input要素全部に対して装飾 */
+   display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #668ad8;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+}
+
+input:active {
+   /* 押されたとき */
+   /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(2px);/*下に動く*/
+}
+ 
