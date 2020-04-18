@@ -1,11 +1,12 @@
 @charset "UTF-8";
 	
-html { font-size: calc(112.5% + 0.5vw) }
+font-size: 2em
 body {
   font-family: YuGothic, "游ゴシック体", "Yu Gothic", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-weight: 400;
   margin: 0;
 }
+
 input {
    /* input要素全部に対して装飾 */
    display: inline-block;
