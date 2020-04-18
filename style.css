@@ -1,4 +1,7 @@
 @charset "UTF-8";
+input[type="submit"]{
+-webkit-appearance: none;
+}
 	
 p{
     font-size:2rem;
