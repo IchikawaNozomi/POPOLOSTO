@@ -22,3 +22,69 @@ input:active {
   transform: translateY(2px);/*下に動く*/
 }
  
+.oneArea {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  max-width: 1024px;
+  margin: 50px auto;
+  padding: 0 10px;
+}
+.oneArea .onebox {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.oneArea .onebox:nth-child(even) {
+  flex-direction: row-reverse;
+  margin-top: 20px;
+}
+.oneArea .onebox .imgArea {
+  width: 16%;
+  position: relative;
+}
+.oneArea .onebox .imgArea img {
+  width: 100%;
+  max-width: 130px;
+  position: absolute;
+  top: 0;
+}
+.oneArea .onebox:nth-child(odd) .imgArea img {
+  left: 0;
+  padding-right: 30px;
+}
+.oneArea .onebox:nth-child(even) .imgArea img {
+  right: 0;
+  padding-left: 30px;
+}
+.oneArea .onebox .fukiArea {
+  width: 63%;
+}
+.oneArea .onebox .fukidasi {
+  width: 100%;
+  position: relative;
+  padding: 25px;
+  background-color: #f2f3f7;
+  font-size: 18px;
+  color: #231815;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+.oneArea .onebox .fukidasi::before {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 22px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 30px 15px 0;
+  border-color: transparent #f2f3f7 transparent transparent;
+}
+.oneArea .onebox:nth-child(odd) .fukidasi::before {
+  left: -20px;
+}
+.oneArea .onebox:nth-child(even) .fukidasi {
+  background-color: #fde5e5;
+}
