@@ -1,6 +1,8 @@
 @charset "UTF-8";
-input[type="submit"]{
--webkit-appearance: none;
+
+input[type="submit"] {
+   -webkit-appearance: none;
+   border-radius: 0;
 }
 
 body {
