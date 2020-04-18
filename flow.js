@@ -91,7 +91,7 @@ function convertArray(data) {
 			}
 		}
 	}
-	
+
 	var text = document.createElement('p');
 	outputElement.appendChild(text);
 
@@ -112,8 +112,8 @@ function convertArray(data) {
 		// 生成したdiv要素を追加する
 		outputElement.appendChild( btn );			
 	}
-	// 最初に戻るボタンを作る
-	if( btn_flg == 0 ){
+	// 
+	if( haba_num != 0 ){
 		var btn = document.createElement('input');
 		// 
 		btn.type = "button";
