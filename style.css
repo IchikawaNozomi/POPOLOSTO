@@ -1,6 +1,9 @@
 @charset "UTF-8";
 	
-font-size: 2em
+p{
+    font-size:1.5rem;
+}
+
 body {
   font-family: YuGothic, "游ゴシック体", "Yu Gothic", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-weight: 400;
@@ -16,6 +19,7 @@ input {
   color: #FFF;
   border-bottom: solid 4px #627295;
   border-radius: 3px;
+  font-size:1.5rem;
 }
 
 input:active {
