@@ -94,7 +94,7 @@ function convertArray(data) {
 		}
 	}
 
-	var text = document.createElement('p');
+	var text = document.createElement('hr');
 	outputElement.appendChild(text);
 
 	// 最初に戻るボタンを作る
