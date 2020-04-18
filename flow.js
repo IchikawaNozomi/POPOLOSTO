@@ -26,8 +26,6 @@ function convertArray(data) {
 	const dataArray = [];
 	const dataString = data.split('\n');
 
-	old_num = line_num;
-
 	for (let i = 0; i < dataString.length; i++) {
 		dataArray[i] = dataString[i].split(',');
 		//console.log( dataArray[i][0] );
@@ -70,9 +68,10 @@ function convertArray(data) {
 						btn.oldString = oldString;
 						btn.onclick = function( e ){
 							console.log( e.target.value, e.target.data );
+							old_num  = line_num;
 							haba_num = e.target.haba + 2;
 							line_num = e.target.data;
-							
+
 							oldElement.textContent = null;
 							var text = document.createElement('p');
 							text.innerHTML = "前の質問：" + e.target.oldString;
