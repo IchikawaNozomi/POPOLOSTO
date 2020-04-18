@@ -11,7 +11,7 @@ body {
 }
 
 @media screen and (max-width: 670px) {
-p { font-size : 2rem ; }
+p { font-size : 4rem ; }
 }
 
 input {
