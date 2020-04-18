@@ -9,22 +9,68 @@ body {
   margin: 0;
 }
 
-@media screen and (min-width: 1000px) {
-  p{
+input {
+   /* input要素全部に対して装飾 */
+  display: inline-block;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  background: #55ffff;/*ボタン色*/
+  color: #000000;
+  border-bottom: solid 4px #B8DAFC;
+  border-radius: 3px;
+  font-size:2rem;
+  margin:8px
+}
+
+/* スマホ用 CSS */
+p{
+  font-size: 4rem;
+}
+input {
+   /* input要素全部に対して装飾 */
+  display: inline-block;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  background: #55ffff;/*ボタン色*/
+  color: #000000;
+  border-bottom: solid 4px #B8DAFC;
+  border-radius: 3px;
+  font-size:4rem;
+  margin:8px
+}
+
+/* タブレット用  CSS */
+@media (min-width: 768px) {/* 画面サイズが768px以下の時、{　}内のCSSを追加するメディアクエリ */
+    p{font-size: 3rem;}
+    input {
+       /* input要素全部に対して装飾 */
+      display: inline-block;
+      padding: 0.5em 2em;
+      text-decoration: none;
+      background: #55ffff;/*ボタン色*/
+      color: #000000;
+      border-bottom: solid 4px #B8DAFC;
+      border-radius: 3px;
+      font-size:3rem;
+      margin:8px
+    }
+}
+
+/* PC用  CSS */
+@media (min-width: 1024px) {/* 画面サイズが1024px以下の時、{　}内のCSSを追加するメディアクエリ */
+    p{font-size: 2rem;}
+    input {
+       /* input要素全部に対して装飾 */
+      display: inline-block;
+      padding: 0.5em 2em;
+      text-decoration: none;
+      background: #55ffff;/*ボタン色*/
+      color: #000000;
+      border-bottom: solid 4px #B8DAFC;
+      border-radius: 3px;
       font-size:2rem;
-  }
-  input {
-     /* input要素全部に対して装飾 */
-     display: inline-block;
-    padding: 0.5em 2em;
-    text-decoration: none;
-    background: #E5F9FF;/*ボタン色*/
-    color: #000000;
-    border-bottom: solid 4px #B8DAFC;
-    border-radius: 3px;
-    font-size:2rem;
-    margin:8px
-  }
+      margin:8px
+    }
 }
 
 input:active {
@@ -98,23 +144,4 @@ input:active {
 }
 .oneArea .onebox:nth-child(even) .fukidasi {
   background-color: #fde5e5;
-}
-
-// スマフォ向けサイズ
-@media screen and (max-width: 800px) {
-  p { 
-    font-size : 4rem ;
-  }
-  input {
-     /* input要素全部に対して装飾 */
-    display: inline-block;
-    padding: 0.5em 2em;
-    text-decoration: none;
-    background: #000000;/*ボタン色*/
-    color: #000000;
-    border-bottom: solid 4px #B8DAFC;
-    border-radius: 3px;
-    font-size:4rem;
-    margin:8px
-  }
 }
