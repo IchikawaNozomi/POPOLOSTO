@@ -1,4 +1,6 @@
 @charset "UTF-8";
+	
+html { font-size: calc(112.5% + 0.5vw) }
 body {
   font-family: YuGothic, "游ゴシック体", "Yu Gothic", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-weight: 400;
