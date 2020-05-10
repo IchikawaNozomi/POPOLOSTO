@@ -22,6 +22,11 @@ input {
   margin:8px
 }
 
+/*input内文章改行*/
+p.nomal{
+  word-wrap: break-word;
+}
+
 /* スマホ用 CSS */
 p{
   font-size: 4rem;
@@ -36,7 +41,9 @@ input {
   border-bottom: solid 4px #B8DAFC;
   border-radius: 3px;
   font-size:4rem;
-  margin:8px
+  margin:8px;
+  word-wrap: break-word;
+}
 }
 
 /* タブレット用  CSS */
