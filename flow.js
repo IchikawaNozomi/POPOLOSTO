@@ -16,7 +16,7 @@ function getCsvData(dataPath) {
 	request.send();
 }
 
-// 
+// 質問とボタンを作る
 function convertArray(data) {
 	var now_num = 0;			// 今の回答の順番
 	var data_num = 0;
@@ -33,13 +33,12 @@ function convertArray(data) {
 	}
 
 	for (let y = 1; y < dataString.length; y++) {
-		//for (let x = 0; x < dataArray[y].length; x++) {
-		for (let x = haba_num; x < (haba_num + 2); x++) {
+		for (let x = haba_num; x < (haba_num + 3); x++) {
+
 			dataArray[y][x] = dataArray[y][x].replace(/\r?\n/g,"");
 
-			//console.log( dataArray[y][x], y, x, now_num, line_num );
-			if( ( x % 2 ) == 0 ){
-				// 
+			if( ( x % 3 ) == 0 ){
+				// 質問の文章を表示する
 				if( dataArray[y][x] != "" ){
 					now_num++;
 
@@ -53,10 +52,26 @@ function convertArray(data) {
 						oldString = dataArray[y][x];
 					}
 				}
+			}else  if( ( x % 3 ) == 1 ){
+				// 質問の文章を表示する
+				if( dataArray[y][x] != "" ){
+					now_num++;
+					if( line_num == now_num ){
+						var text = document.createElement('p');
+						// 
+						text.innerHTML = "説明：" + dataArray[y][x];
+	 					// 生成したdiv要素を追加する
+						outputElement.appendChild(text);
+
+						oldString = "";
+					}
+				}
 			}else{
-				// 
+				// 選択肢側の解析
 				if( dataArray[y][x].trim().length != 0 ){
 					data_num++;
+
+					// 選択肢ボタンを設置する
 					if( line_num == now_num ){
 						console.log( line_num, now_num, dataArray[y][x].trim().length );
 
@@ -70,14 +85,15 @@ function convertArray(data) {
 						btn.onclick = function( e ){
 							console.log( e.target.value, e.target.data );
 							old[ e.target.haba ] = line_num;
-							haba_num = e.target.haba + 2;
+							haba_num = e.target.haba + 3;
 							line_num = e.target.data;
 
 							oldElement.textContent = null;
 							var text = document.createElement('p');
-							text.innerHTML = "前の質問：" + e.target.oldString;
-							oldElement.appendChild(text);
-							
+							if( e.target.oldString != "" ){
+								text.innerHTML = "前の質問：" + e.target.oldString;
+								oldElement.appendChild(text);
+							}						
 							
 							outputElement.textContent = null;
 							getCsvData('./flow.csv');
@@ -94,8 +110,11 @@ function convertArray(data) {
 		}
 	}
 
-	var text = document.createElement('hr');
-	outputElement.appendChild(text);
+	// 区切り線を設置する
+	if( haba_num != 0 ){
+		var text = document.createElement('hr');
+		outputElement.appendChild(text);
+	}
 
 	// 最初に戻るボタンを作る
 	if( btn_flg == 0 ){
@@ -104,6 +123,7 @@ function convertArray(data) {
 		btn.type = "button";
 		btn.value = "最初に戻る";
 		btn.onclick = function( e ){
+			oldElement.textContent = null;
 			haba_num = 0;
 			line_num = 1;
 			outputElement.textContent = null;
@@ -114,14 +134,15 @@ function convertArray(data) {
 		// 生成したdiv要素を追加する
 		outputElement.appendChild( btn );			
 	}
-	// 
+	// ひとつ戻るボタンを設置
 	if( haba_num != 0 ){
 		var btn = document.createElement('input');
 		// 
 		btn.type = "button";
 		btn.value = "一つ前の質問に戻る";
 		btn.onclick = function( e ){
-			haba_num = haba_num - 2;
+			oldElement.textContent = null;
+			haba_num = haba_num - 3;
 			line_num = old[ haba_num ];
 			outputElement.textContent = null;
 			getCsvData('./flow.csv');
